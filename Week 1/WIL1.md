@@ -1,4 +1,6 @@
-# GDSC 과제 (Week 1)
+#GDSC 과제 (Week1)
+
+(1) 자바와 객체 지향 프로그래밍에 대해 정리하기
 
 # Java와 객체 지향 프로그래밍
 
@@ -73,3 +75,65 @@ _JVM이란? JVM(Java Virtual Machine)은 자바 애플리케이션을 실행하�
 •상위 클래스가 가지고 있는 메소드를 하위 클래스가 재정의해서 사용하는 것
 2. 오버로딩
 •같은 이름의 메서드가 인자의 개수나 자료형에 따라 다른 기능을 하는 것
+
+
+(2) 조건에 맞춰 프로그램을 구현하기
+
+<사칙연산에 대한 코드> 
+
+public interface Calculator {
+    int add(int num1, int num2);
+    int subtract(int num1, int num2);
+    int multiply(int num1, int num2);
+    int divide(int num1, int num2);
+}
+
+public class CalculatorImpl implements Calculator {
+    public int add(int num1, int num2) {
+        return num1 + num2;
+    }
+    public int subtract(int num1, int num2) {
+        return num1 - num2;
+    }
+
+    public int multiply(int num1, int num2) {
+        return num1 * num2;
+    }
+    public int divide(int num1, int num2) {
+        if (num2 == 0) {
+            throw new ArithmeticException("나누는 수는 0이 될 수 없습니다.");
+        }
+        return num1 / num2;
+    }
+
+    public static void main(String[] args) {
+        Calculator calculator = new CalculatorImpl();
+        
+        int num1 = 1234;
+        int num2 = 4321;
+        int num3 = 911;
+        int num4 = 170;
+        int num5 = 2;
+        int num6 = 3;
+        int num7 = 33;
+        int num8 = 11;
+        
+        int additionResult = calculator.add(num1, num2);
+        int subtractionResult = calculator.subtract(num3, num4);
+        int multiplicationResult = calculator.multiply(num5, num6);
+        int divisionResult = calculator.divide(num7, num8);
+        
+        System.out.println(num1 + " + " + num2 + " = " + additionResult);
+        System.out.println(num3 + " - " + num4 + " = " + subtractionResult);
+        System.out.println(num5 + " * " + num6 + " = " + multiplicationResult);
+        System.out.println(num7 + " / " + num8 + " = " + divisionResult);
+    }
+}
+
+<동물 출력에 관한 코드>
+public class Animal {
+    public static void main(String[] args) {
+        System.out.println("cat says Meow!");
+        System.out.println("dog says Woof!");
+    }
+}
