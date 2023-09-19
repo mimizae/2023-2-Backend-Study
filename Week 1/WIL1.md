@@ -131,6 +131,7 @@ public class CalculatorImpl implements Calculator {
 }
 
 <동물 출력에 관한 코드>
+
 public class Animal {
     public static void main(String[] args) {
         System.out.println("cat says Meow!");
