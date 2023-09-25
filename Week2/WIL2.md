@@ -40,8 +40,7 @@ TCP(네트워크의 계층의 Network Layer에서 사용하는 프로토콜)/IP 
 ## **HTTP Message**
 
 HTTP는 HTTP message를 통해 데이터를 주고 받는다. HTTP message에는 요청과 응답이 있다.
-
-![Untitled](GDSC%20%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A6%20(Week2)%20c7899328b3754f4ca016b3950241a000/Untitled.png)
+(https://prod-files-secure.s3.us-west-2.amazonaws.com/637bb81d-1f1c-403a-8c76-edb729c67b7e/c1c832ee-a35b-4fb1-9525-bbbf67998155/Untitled.png)
 
 ## **HTTP Method**
 
