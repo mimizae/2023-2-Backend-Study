@@ -140,3 +140,20 @@ HTTP는 HTTP message를 통해 데이터를 주고 받는다. HTTP message에는
 </aside>
 
 - 개인 정보와 같은 민감한 데이터를 주고 받아야 한다면 HTTPS를 이용해야 하지만, 노출이 되어도 괜찮은 단순한 정보 조회 등 만을 처리하고 있다면 HTTP를 이용하면 된다.
+
+
+- 아래 API에 대한 RESTful한 URI를 설계하라.
+
+
+이벤트 목록 조회 : GET /events
+이벤트 조회 : GET /events/{eventID}
+이벤트 등록 : POST /events
+이벤트 수정 : PUT /events/{eventID}
+이벤트 삭제 : DELETE /events/{eventID}
+이벤트 상태 변경 : PUT /events/{eventID}/status
+특정 이벤트의 주문 목록 조회 : GET /events/{eventID}/orders
+멤버 목록 조회 : GET /members
+특정 멤버 권한 변경 : PUT /members/{memberID}/change-role
+특정 멤버 정보 조회 : GET /members/{memberID}
+특정 멤버 정보 변경 : PUT /members/{memberID}
+멤버 등록 : POST /members
